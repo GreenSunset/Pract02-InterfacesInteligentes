@@ -23,7 +23,9 @@ public class ScaleWithDistance : MonoBehaviour
         {
             scale = Mathf.Lerp(middleDistance, minScale, -distanceDifference / maxDistance);
         }
-        // float scale = Mathf.Clamp((distanceDifference / maxDistance) * (maxScale - minScale) + minScale, minScale, maxScale);
         transform.localScale = new Vector3(scale, scale, scale);
+        // Gets more transparent the bigger it is
+        Color color =  GetComponent<Renderer>().materials[0].color;
+        GetComponent<Renderer>().material.color = new Color(color.r, color.g, color.b, Mathf.InverseLerp(maxScale, minScale, scale));
     }
 }

@@ -7,10 +7,9 @@ public class PhysiclessMovement : MonoBehaviour
     public float speed = 5f;
     public float rotationSpeed = 90f;
     
-    // Update is called once per frame
     void Update()
     {
-        // Movement with asdf axis
+        // Transform es accesible sin necesidad de usar GetComponent
         transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, Input.GetAxis("Vertical") * Time.deltaTime * speed);
         transform.Rotate(0, Input.GetAxis("Rotation") * Time.deltaTime * rotationSpeed, 0);
     }
