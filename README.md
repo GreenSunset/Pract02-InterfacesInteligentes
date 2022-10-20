@@ -33,7 +33,7 @@
 
 # Ej 2
 
-<b>Controlador de jugador cinemático</b>: Movimiento en el plano XZ con las teclas WASD, rotación con las teclas QE.
+<b>Controlador de jugador cinemático</b>: Movimiento en el plano XZ con las teclas WASD, rotación con las teclas QE (Cámara sigue al jugador).
 
 ![2](2.gif)
 
